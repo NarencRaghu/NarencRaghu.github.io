@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title> Personalized Cancer Medicine Project </title>
+        <title> Alzheimer's Predictor </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
@@ -22,8 +22,7 @@
             <link rel="stylesheet" href="assets/css/nice-select.css">
             <link rel="stylesheet" href="assets/css/style.css">
    </head>
-
-   <body style="background-color: #b0c4de;">
+   <body style="background-color: lightsteelblue;">
     <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -94,13 +93,17 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap">
-                                <h2>Personalized Cancer Medicine Project</h2>
+                                <br>
+                                <br>
+                                <h2>The Alzheimer's Predictor</h2>
                                 <nav aria-label="breadcrumb ">
                                     <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Personalized Cancer Medicine Project</a></li> 
+                                    <li class="breadcrumb-item"><a href="#">Alzheimer's Predictor</a></li> 
                                     </ol>
                                 </nav>
+                                <br>
+                                <i>Fill in the following variables with data attained from an MRI Scan</i>
                             </div>
                         </div>
                     </div>
@@ -110,38 +113,80 @@
         <!-- Hero End -->
         <!-- About Area start -->
         <section class="about-area section-padding">
-            <div class="container">
+            <div class="container" style="text-align:center; width:50%">
                 <div class="row ">
-                    <div class="col-lg-5">
-                        <div class="about-caption mb-30">
-                            <h3>What is this Project?</h3>
-                            <p class="pera1">There are various treatment options for those diagnosed with cancer. Choosing the best option is an important choice for each patient, especially when considering factors such as money and effectivenes of the treatment. This project aims to bring personalized cancer medicine to each patient by connecting each patient with the best choice of treatment for them.</p>
-                            <h3>How it Works:</h3>
-                            <p>The algorithms use various machine learning algorithms and computational tools to device a model prediction for how each treatment option will impact the status of the patient. This is an ongoing project and this page is still being built.</p>
-                            <h3>The Different Options</h3>
-                            <ul display:list-item> 
-                                <li>- Surgery</li>
-                                <li>- Chemotherapy</li>
-                                <li>- Radiation therapy</li>
-                                <li>- Bone marrow transplant</li>
-                                <li>- Immunotherapy</li>
-                                <li>- Hormone therapy</li>
-                                <li>- Targeted drug therapy</li>
-                                <li>- ryoablation</li>
-                                <li>- Radiofrequency ablation</li>
-                                <li>- Clinical trials</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 offset-lg-1">
-                        <div class="about-caption mb-50">
-                            <h3>Explore My Website to Learn More</h3>
-                            <img style = "width:100%" src="assets/img/logo/Cancer.jpg" alt="">
-                            <p></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="ti-arrow-down"></i> </i></p>
-                            <h3>Github</h3>
-                            <p>This is an ongoing project and a github does not exist yet.</p>
-                            <p>Contact me if you have any questions or suggestions by sending me a message below</p>
+                    <div class="col-12" style = "width: 100%">
+                        <div class="about-caption mb-30" style = "margin-left: -5%; margin-right: 20%">
+                            <form action="/action_page.php" style="text-align:right" id="numform" >  
+                                <h2>Patient Information</h2>
+                                <br>
+                                <br>
+                                Number of Days between Two Medical Visits:  <input type="text" id = "idelay" name="Delay" placeholder = "ex:144">
+                                <br>
+                                <br>
+                                Gender (0 for Female and 1 for Male):  <input type="text" id = "igender" name="igender" placeholder = "ex:0">
+                                <br>
+                                <br>
+                                Age:  <input type="text" id ="iage" name="iage" placeholder = "ex:93">
+                                <br>
+                                <br>
+                                Mini Mental State Examination:  <input type="text" id = "iMMSE" name="iMMSE" placeholder = "ex:30">
+                                <br>
+                                <br>
+                                Clinical Dementia Rating:  <input type="text" id = "iCDR" name="iCDR" placeholder = "ex:0">
+                                <br>
+                                <br>
+                                Estimated Total Cranial Volume:  <input type="text" id = "ieTIV" name="ieTIV" placeholder = "ex:1488">
+                                <br>
+                                <br>
+                                Normalize Whole Brain Volume:  <input type="text" id = "inWBV" name="inWBV" placeholder = "ex:0.735">
+                                <br>
+                                <br>
+                                Atlas Scaling Factor:  <input type="text" id = "iASF" name="iASF" placeholder = "ex:1.179">
+                                <br>
+                                <br>
+                                <script>
+                                    function process() {
+                                        if (document.getElementById("igender").value == 0) {
+                                            var newdelay = (document.getElementById("idelay").value - 595.1046)/635.4851;
+                                            var newage = (document.getElementById("iage").value - 77.0134)/7.640957;
+                                            var newMMSE = (document.getElementById("iMMSE").value - 27.34048)/3.673414629;
+                                            var newCDR = (document.getElementById("iCDR").value - 0.290884718)/0.374557115;
+                                            var neweTIV = (document.getElementById("ieTIV").value - 1488.128686)/176.1392855;
+                                            var newnWBV = (document.getElementById("inWBV").value - 0.729568365)/0.037135016;
+                                            var newASF = (document.getElementById("iASF").value - 1.195461126)/0.138091958;
+                                            var newgender = (document.getElementById("igender").value - 1.195461126)/0.138091958;
+                                            var out = -0.007311 * newdelay + 0.042020 * newage + 0.056126 * newMMSE + 0.393081 * newCDR + -0.430935 * neweTIV + -0.062057 * newnWBV + -0.336954 * newASF + -0.068131 * newgender + 0.59579701;
+                                        } else if (document.getElementById("igender").value == 1) {
+                                            var newdelay = (document.getElementById("idelay").value - 595.1046)/635.4851
+                                            var newage = (document.getElementById("iage").value - 77.0134)/7.640957
+                                            var newMMSE = (document.getElementById("iMMSE").value - 27.34048)/3.673414629
+                                            var newCDR = (document.getElementById("iCDR").value - 0.290884718)/0.374557115
+                                            var neweTIV = (document.getElementById("ieTIV").value - 1488.128686)/176.1392855
+                                            var newnWBV = (document.getElementById("inWBV").value - 0.729568365)/0.037135016
+                                            var newASF = (document.getElementById("iASF").value - 1.195461126)/0.138091958
+                                            var newgender = (document.getElementById("igender").value - 1.195461126)/0.138091958
+                                            var out = -0.007311 * newdelay + 0.042020 * newage + 0.056126 * newMMSE + 0.393081 * newCDR + -0.430935 * neweTIV + -0.062057 * newnWBV + -0.336954 * newASF + 0.068131 * newgender + 0.59579701;
+                                        } else {
+                                            out = "nothing"
+                                        } 
+                                        out = Math.round(out);
+                                        if (out == 0) {
+                                            out = "The Algorithm Predicts That The Patient Will Not Have Alzheimer's"
+                                        }
+                                        else if (out == 1) {
+                                            out = "The Algorithm Predicts That The Patient Will Have Alzheimer's"
+                                        } else {
+                                            out = "One or more of your values are unusual! Check your inputs again."
+                                        }
+                                        document.getElementById("output").value = out;
+                                    }
+                                </script>
+                                <input type="button" value="Predict" onclick = "process()">
+                                <br>
+                                <br>
+                                <p style = "margin-left: 45%; text-align: left;">Prediction will be displayed below:</p><output name = "output" style = "color: firebrick" id = "output"></output>
+                            </form>
                         </div>
                     </div>
                 </div>
