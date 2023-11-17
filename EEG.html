@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title> Alzheimer's Project </title>
+        <title> EEG Cognitive Decline Project </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
@@ -94,11 +94,11 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap">
-                                <h2>The Alzheimer's Prediction Project</h2>
+                                <h2>EEG Cognitive Decline Project</h2>
                                 <nav aria-label="breadcrumb ">
                                     <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Alzheimer's Prediction Project</a></li> 
+                                    <li class="breadcrumb-item"><a href="#">EEG Cognitive Decline Project</a></li> 
                                     </ol>
                                 </nav>
                             </div>
@@ -115,30 +115,26 @@
                     <div class="col-lg-5" style = "width: 100%">
                         <div class="about-caption mb-30">
                             <h3>What is this Project?</h3>
-                            <p class="pera1">The goal of this project is to predict instances of Alzheimer's disease in patients after they have completed an MRI scan. By predicting who has Alzheimer's, we are able to save people by putting them into earlier preventative care treatment before the disease can progress. Especially with Alzheimer's, early detection is critical in saving patients. Through the use of various machine learning algorithms such as K-Nearest Neighbors, Support Vector Machines, and Linear Regression, this project provides various methods of prediction.</p>
-                            <h3>The Scores and Errors of the Various Algorithms</h3>
-                            <p>Of the various algorithms and methods used in this project, the one that had the lowest Root Mean Square Error was the K-Nearest Neighbors Algorithm with a RMSE of 0.2839809171235324. The Support Vector Machine got a RSME of 0.2978416985906353 and the linear regression (both regular and linear) got a RSME of 0.30399743103099924. However, all the algorithms are relatively close in their error and since the error lies between 0.2-0.5 for all of them, the algorithms are reliable.</p>
-                            <h3>How it Works:</h3>
-                            <p>Each of the algorithm takes inputs from the user for various features, ranging from simple ones like age and gender to complex features that can only be attained after an MRI scan like the Estimated Total Intracranial Volume or eTIV. Based on these features, the algorithm uses a combination of advanced mathematical models and computational tools to predict a result. Each algorithm will output either a 1 or 0 based on user inputs. A 1 corresponds to a prediction of Alzheimer's disease and a 0 to a prediction that the patient will not have Alzheimer's disease.</p>
-                            <p>Try out the Algorithm by Clicking Here: <a href= "AlzheimerProjection.html">Alzheimer's Predictor</a> </p>
+                            <p class="pera1">Working under Dr. Alexander Choi at Banner Health in the Neurodegenerative disease department, I pursued a project to analyze cognitive decline using EEG. Alzheimer’s disease and Parkinson’s disease are both increasingly common neurodegenerative disorders that cause cognitive decline found in older adults. 40-60% of individuals above the age of 60 have mild cognitive impairment (MCI) defined by Parkinson’s disease (PD) and Alzheimer’s disease (AD)1,2. Differentiating between these patients based on their cognitive profiles will facilitate the assessment of disease worsening and improvement, including the prediction of dementia conversion. Approaches to preventing and treating cognitive decline have largely been unsuccessful3. EEG has shown value in research of neurodegenerative disease as a biomarker of disease state7  and is recognized as an ancillary study for the clinical definition of Lewy Body Dementia with accuracy compared to AD8. By understanding EEG markers that correlate with cognitive decline in AD or PD, criteria to distinguish between MCI pathologies could be established. EEG has been increasingly used for diagnosing dementia pathologies4 because it is comparatively inexpensive, non-invasive, and allows for continuous monitoring. Specifically, the Grand Total EEG (GTE) score and similar visual rating scales for EEG have been used successfully in previous studies to differentiate between dementia with Lewy bodies and AD5,6. Using qualitative EEG analysis to distinguish between MCI pathologies is not frequent in clinical settings, which might be due to the absence of a reliable scoring method.</p>
+                            <h3>A Little about the Method:</h3>
+                            <p>As part of the Brain and Body Donation Program, EEG data was collected from individuals in addition to neuropsychology testing and post-mortem diagnosis. 484 donors were analyzed, comprising 1187 EEG exams.  Of these, 77 donors had final consensus cognitive diagnosis of MCI prior to death, which comprised the focus of this analysis. Only participants with MCI due to AD, PD, Tauopathy, or Argyrophilic granules (AG) were used, in addition to participants who were diagnosed with both AD and PD. Participants who had both tauopathy and AG were considered under tauopathy since the AG group was being used as a control. Frontal and Parietal spectral power, as well as a visual rating scale metric, were analyzed to explore their impact on cognitive worsening. The visual rating scale used was modeled after the Van der Zande study6, with 1 = normal, 2 = mildly abnormal, and 3 = diffusely abnormal. Cognitive worsening was defined by diagnostic worsening and a MMSE score.</p>
+                            <br>
                         </div>
                     </div>
                     <div class="col-lg-5 offset-lg-1" style = "width: 100%">
                         <div class="about-caption mb-50">
-                            <h3>Explore My Website to Learn More</h3>
-                            <img style = "max-width: 100%;" src="assets/img/logo/Alzheimers.jpg" alt="">
-                            <p></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="ti-arrow-down"></i> </i></p>
+                            <h3>Some Visuals From This Project</h3>
+                            <img style = "max-width: 100%;" src="assets/img/logo/EEG 1.png" alt="">
+                            <br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Model Prediction Scoring using ROC Analysis of Three Different groups: Alzheimer's, Parkinson's, and REM Sleep Behavior Disorder.</p>
+                            <br>
+                            <img style = "max-width: 100%;" src="assets/img/logo/EEG 2.png" alt="">
+                            <br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A table showing the results of statistical analysis conducted during this project.</p>
                             <h3>Github</h3>
-                            <p>Visit My <a href="https://github.com/NarencRaghu/Project-Alzheimer-s">Github</a> To Learn More.</p>
-                            <p>Contact me if you have any questions by sending me a message below</p>
-                            <h3>Data and Statistics From this Project</h3>
-                            <p></p>
-                            <img style = "width:100%" src="assets/img/logo/knngraph.jpg" alt="">
-                            <p></p>
-                            <img style = width:100% src="assets/img/logo/svmgraph.jpg" alt="">
-                            <p></p>
-                            <p>View this projects full statistics and graphs <a href="assets/img/logo/Stats.pdf">here.</a></p>
+                            <p>Although code for this project is confidential, visit My <a href="https://github.com/NarencRaghu/Gene-Expression-Project-Example-Code">Github</a> To Learn More about other projects.</p>
+                            <br>
+                            <img style = "max-width: 100%;" src="assets/img/logo/bannerhealth.png" alt="">
                         </div>
                     </div>
                 </div>
